@@ -33,10 +33,10 @@ from __future__ import print_function
 from telesign.messaging import MessagingClient
 ```
 ```
-customer_id = "C765DCA3-324C-4812-87F8-7D13ECE90BE2"
-api_key = "+sDtoZC6HVB6esmkapaRjdxxtnZG9XHWFK/pH1YljzpusZPDrxzykS2CnZrbSbdFLAzLXUU7eJhL2ZwsADZLxg=="
+customer_id = "Your customer key"
+api_key = "Your API key"
 
-phone_number = "+5548999751669"
+phone_number = "Your phone number"
 message_type = "ARN"
 
 messaging = MessagingClient(customer_id, api_key)
