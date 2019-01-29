@@ -24,18 +24,28 @@ It is necessary to configure TeleSign to send messages and it is also necessary 
 TeleSign is required for sending messages. If you don't want to send SMS, delete the following lines of code:
 
 ```
+from datetime import datetime
+```
+```
+from __future__ import print_function
+```
+```
 from telesign.messaging import MessagingClient
+```
+```
+customer_id = "C765DCA3-324C-4812-87F8-7D13ECE90BE2"
+api_key = "+sDtoZC6HVB6esmkapaRjdxxtnZG9XHWFK/pH1YljzpusZPDrxzykS2CnZrbSbdFLAzLXUU7eJhL2ZwsADZLxg=="
 
-customer_id = "Your customer key"
-api_key = "Your API Key"
-
-phone_number = "Your phone number"
-message = "Reconnected"
+phone_number = "+5548999751669"
 message_type = "ARN"
 
 messaging = MessagingClient(customer_id, api_key)
 ```
 ```
+now = datetime.now()
+```
+```
+message = "Reconnected. The connection was lost on: {}.".format(now.strftime("%Y-%m-%d %H:%M"))
 response = messaging.message(phone_number, message, message_type)
 ```
 

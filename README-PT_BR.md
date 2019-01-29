@@ -24,18 +24,28 @@ pip install -r requirements.txt
 O TeleSign é necessário para o envio de menssagens. Caso você não queira que o envio de SMS ocorra, apague as seguintes linhas de código:
 
 ```
+from datetime import datetime
+```
+```
+from __future__ import print_function
+```
+```
 from telesign.messaging import MessagingClient
+```
+```
+customer_id = "C765DCA3-324C-4812-87F8-7D13ECE90BE2"
+api_key = "+sDtoZC6HVB6esmkapaRjdxxtnZG9XHWFK/pH1YljzpusZPDrxzykS2CnZrbSbdFLAzLXUU7eJhL2ZwsADZLxg=="
 
-customer_id = "Your customer key"
-api_key = "Your API Key"
-
-phone_number = "Your phone number"
-message = "Reconnected"
+phone_number = "+5548999751669"
 message_type = "ARN"
 
 messaging = MessagingClient(customer_id, api_key)
 ```
 ```
+now = datetime.now()
+```
+```
+message = "Reconnected. The connection was lost on: {}.".format(now.strftime("%Y-%m-%d %H:%M"))
 response = messaging.message(phone_number, message, message_type)
 ```
 
