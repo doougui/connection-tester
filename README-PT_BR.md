@@ -75,7 +75,7 @@ Para fazer com que o programa inicie com o Windows, precisaremos fazer alguns pr
 1. Aperte a tecla ```Windows``` + ```R``` e digite ```shell:startup```.
 2. Copie e cole o arquivo __connection_tester.pyw__ na pasta que abrirá.
 3. Mova a pasta __files__ para o local desejado.
-4. Altere a seguinte linha de código para o local onde está o arquivo: ```playsound('files/reconnected.wav', block=False)```
+4. Altere as seguintes linhas de código para o local onde estão os arquivos: ```playsound('files/reconnected.wav', block=False)``` e ```playsound('files/disconnected.wav', block=False)```.
 - Você também pode alterar o site em que você fará os testes de conexão mudando as seguintes linhas de código: ```get('http://www.google.com')```.
 
 **Está feito :)**

@@ -68,14 +68,14 @@ Message Types:
 | ARN | Alerts, reminders, and notifications |
 | MKT | Marketing traffic						   |
 
-#### Enviroment
+#### Environment
 
 To make the program start with Windows, some procedures need to be done.
 
 1. Press the ```Windows``` + ```R``` key and type ```shell:startup```.
 2. Copy and paste the __connection_tester.pyw__ file on the folder that will open.
 3. Move the __files__ folder to your desired location.
-4. Change the following line of code to the location where the file is located: ```playsound('files/reconnected.wav', block=False)```
+4. Change the following lines of code to the location where the files is located: ```playsound('files/reconnected.wav', block=False)``` and ```playsound('files/disconnected.wav', block=False)```.
 - You can also change the website where you will do the connection tests by changing the following lines of code: ```get('http://www.google.com')```.
 
 **It's done :)**
